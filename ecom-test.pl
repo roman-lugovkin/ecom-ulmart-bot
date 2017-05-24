@@ -14,5 +14,7 @@ use ECOM::Telegram::UlmartBot;
 
 $| = 1;
 
+# NOTE: You must describe bot token in new( 'token' => '...' )!!!
+
 my $tlg = ECOM::Telegram::UlmartBot->new;
 my $r = $tlg->run( 1 );

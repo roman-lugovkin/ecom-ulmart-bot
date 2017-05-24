@@ -18,13 +18,15 @@ use ECOM::Telegram::API::Message;
 use ECOM::Telegram::Bot;
 use parent 'ECOM::Telegram::Bot';
 
-my $TOKEN = '395198585:AAF_Hm8jJqtvw5rB8dNEwPSUnufGOzOwRjA';
+my $TOKEN = ''; # TOKEN NEEDED
 my $LOGO = 'https://23213p.r.fast.ulmart.ru/resources/desktop.blocks/b-head-logo/ulmart-logo.png';
 
 sub init {
     my $self = shift;
 
-    $self->{'token'} = $TOKEN;
+    if ( $TOKEN ) {
+        $self->{'token'} = $TOKEN;
+    }
 
     $self->SUPER::init( @_ );
 
